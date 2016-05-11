@@ -4,6 +4,9 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+// Java End-of-file
+// https://www.hackerrank.com/challenges/java-end-of-file
+
 public class Solution {
 
     public static void main(String[] args) {
