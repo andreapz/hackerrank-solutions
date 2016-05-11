@@ -1,18 +1,43 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.io.*;
 
-public class Solution {
+// Java Datatypes
+// https://www.hackerrank.com/challenges/java-datatypes
+class Test8{
+    public static void main(String []argh)
+    {
 
-    public static void main(String[] args) {
+
+
         Scanner sc = new Scanner(System.in);
-        int i = 1;
-        String s = "";
-        while(sc.hasNextLine()) {
-            s = sc.nextLine();
-            System.out.println((i++)+" "+s);
+        int t=sc.nextInt();
+
+        for(int i=0;i<t;i++)
+        {
+
+            try
+            {
+                long x=sc.nextLong();
+                System.out.println(x+" can be fitted in:");
+                if(x>=-128 && x<=127){
+                    System.out.println("* byte");
+                } 
+                if(x>=-32768 && x<=32767) {
+                    System.out.println("* short");
+                } 
+                if(x>=Integer.MIN_VALUE && x<=Integer.MAX_VALUE) {
+                    System.out.println("* int");
+                } 
+                if(x>=Long.MIN_VALUE && x<=Long.MAX_VALUE)  {
+                    System.out.println("* long");                                    
+                } 
+            }
+            catch(Exception e)
+            {
+                System.out.println(sc.next()+" can't be fitted anywhere.");
+            }
+
+
         }
     }
 }
