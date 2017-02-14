@@ -15,7 +15,7 @@ public class KeystoreTest {
 
 
     private static String ksPw = "mamadou";
-    private static String aliasPw = "mamadou";
+    private static String aliasPw = "Mt;wf4<Yk5:l7q@RS";
 
     // private static String alias = "indoona";
      private static String alias = "tiscali_mail";
@@ -25,6 +25,10 @@ public class KeystoreTest {
 
     public static void main(String[] args) {
         KeyStore ks = null;
+        
+		//aliasPw = args[0];
+		//System.out.println("Pw " + aliasPw);
+		
         try {
             ks = KeyStore.getInstance(KeyStore.getDefaultType());
             try (FileInputStream fis = new FileInputStream(keystore)) {
